@@ -19,9 +19,9 @@ export default function Navigation() {
           isActive ? { color: "white" } : { color: "black" }
         }
         className="nav"
-        to="/users"
+        to="/userz"
       >
-        Users
+        userz
       </NavLink>
     </section>
   );

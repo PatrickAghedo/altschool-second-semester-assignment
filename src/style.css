@@ -72,3 +72,7 @@ button {
   width: 100%;
   border: 1px solid black;
 }
+
+.wrapper {
+    padding: 15px;
+}
