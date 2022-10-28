@@ -19,7 +19,7 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
           <Route path="/" element={<Home />} />
           <Route path="/users" element={<Users />} />
-          <Route path="/users" element={<FetchAPI />} />
+          <Route path="/FetchAPI" element={<FetchAPI />} />
         </Routes>
       </ErrorBoundary>
     </div>
