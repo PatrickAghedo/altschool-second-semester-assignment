@@ -1,6 +1,7 @@
 import React, { Components } from "react";
 import { Routes, Route } from "react-router-dom";
 import PageNotFound from "./components/404page";
+import ErrorBoundary from "./components/ErrorBoundary";
 import FetchAPI from "./components/FetchAPI";
 import Home from "./components/Home";
 import Users from "./components/Users";
@@ -13,15 +14,14 @@ function Farewell({ subject }) {
 function App() {
   return (
     <div className="app">
-      {/* <ErrorBoundary Fallbackcomponent={your_errorComponent}>
-        <Farewell />
-      </ErrorBoundary> */}
-      <Routes>
-        <Route path="*" element={<PageNotFound />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/users" element={<Users />} />
-        <Route path="/users" element={<FetchAPI />} />
-      </Routes>
+      <ErrorBoundary>
+        <Routes>
+          <Route path="*" element={<PageNotFound />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/users" element={<FetchAPI />} />
+        </Routes>
+      </ErrorBoundary>
     </div>
   );
 }

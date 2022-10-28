@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navigation from "./Navigation";
 import "../style.css";
-import FetchAPI from "./FetchAPI";
+// import FetchAPI from "./FetchAPI";
 
 export default function Users() {
   const [currentItem, setCurrentItem] = useState(0);
@@ -645,7 +645,7 @@ export default function Users() {
       <h1>Users</h1>
       <p>This is the Users Page</p>
       <Navigation />
-      <button onClick={<FetchAPI />}>Users</button>
+      {/* <button onClick={<FetchAPI />}>Users</button> */}
       <section className="news">
         {loading ? (
           <div>loading</div>
