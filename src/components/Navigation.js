@@ -7,18 +7,18 @@ export default function Navigation() {
     <section className="nav-container">
       <NavLink
         style={({ isActive }) =>
-          isActive ? { color: "white" } : { color: "black" }
+          isActive ? { color: "red" } : { color: "blue" }
         }
-        className="nav"
+        className="bar"
         to="/"
       >
-        Home Page
+        Home
       </NavLink>
       <NavLink
         style={({ isActive }) =>
-          isActive ? { color: "white" } : { color: "black" }
+          isActive ? { color: "red" } : { color: "blue" }
         }
-        className="nav"
+        className="bar"
         to="/Users"
       >
         Users

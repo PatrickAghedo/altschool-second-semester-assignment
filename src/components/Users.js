@@ -31,7 +31,7 @@ function Users() {
       <div className="Users">
         <h2>List of Users</h2>
         {data?.results.map((each, index) => {
-          const name = `${each.name.title} ${each.name.first} ${each.name.last}`;
+          const name = ` ${each.name.title} ${each.name.first} ${each.name.last}`;
           return (
             <li key={name.toLowerCase().replaceAll(" ", "")}>{`${
               index + 1
@@ -39,28 +39,32 @@ function Users() {
           );
         })}
         {
+        }
           <button
+            className="nav"
             disabled={page <= 1}
             onClick={() => setPage((prev) => prev - 1)}
           >
-            prev
+            Prev
           </button>
-        }
-        <p className="pagination">
+        <p>
           Pages: {page} of {pages}
         </p>
         {
           <button
+            className="nav"
             disabled={page >= pages}
             aria-disabled={page >= pages}
             onClick={() => setPage((prev) => prev + 1)}
           >
-            next
+            Next
           </button>
         }
         {Array.from({ length: pages }, (value, index) => index + 1).map(
           (each) => (
-            <button onClick={() => setPage(each)}>{each}</button>
+            <button className="nav" onClick={() => setPage(each)}>
+              {each}
+            </button>
           )
         )}
       </div>
