@@ -19,7 +19,6 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
           <Route path="/" element={<Home />} />
           <Route path="/users" element={<Users />} />
-          <Route path="/FetchUsers" element={<FetchUsers />} />
         </Routes>
       </ErrorBoundary>
     </div>
