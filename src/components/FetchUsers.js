@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import useFetch from "./useFetch";
 import "../style.css";
 
-function FetchAPI() {
+function FetchUsers() {
   const [page, setPage] = useState(1);
 
   const { loading, error, data } = useFetch(
@@ -64,4 +64,4 @@ function FetchAPI() {
   );
 }
 
-export default FetchAPI;
+export default FetchUsers;

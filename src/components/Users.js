@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navigation from "./Navigation";
 import "../style.css";
-// import FetchAPI from "./FetchAPI";
+import FetchUsers from "./FetchUsers";
 
 export default function Users() {
   const [currentItem, setCurrentItem] = useState(0);
@@ -619,7 +619,7 @@ export default function Users() {
     setLoading(false);
   }, [currentItem]);
 
-  const handleNext = (event) => {
+  function handleNext (event) {
     event.preventDefault();
     const length = listItems.length;
     const count = length - 1;
@@ -630,7 +630,7 @@ export default function Users() {
     }
   };
 
-  const handlePrevious = (event) => {
+  function handlePrevious (event) {
     event.preventDefault();
 
     if (currentItem > 0) {
@@ -645,7 +645,7 @@ export default function Users() {
       <h1>Users</h1>
       <p>This is the Users Page</p>
       <Navigation />
-      {/* <button onClick={<FetchAPI />}>Users</button> */}
+      <button onClick={<FetchUsers />}>FetchUsers</button>
       <section className="news">
         {loading ? (
           <div>loading</div>

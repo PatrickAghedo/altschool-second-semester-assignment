@@ -2,7 +2,7 @@ import React, { Components } from "react";
 import { Routes, Route } from "react-router-dom";
 import PageNotFound from "./components/404page";
 import ErrorBoundary from "./components/ErrorBoundary";
-import FetchAPI from "./components/FetchAPI";
+import FetchUsers from "./components/FetchUsers";
 import Home from "./components/Home";
 import Users from "./components/Users";
 import "./style.css";
@@ -19,7 +19,7 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
           <Route path="/" element={<Home />} />
           <Route path="/users" element={<Users />} />
-          <Route path="/FetchAPI" element={<FetchAPI />} />
+          <Route path="/FetchUsers" element={<FetchUsers />} />
         </Routes>
       </ErrorBoundary>
     </div>
