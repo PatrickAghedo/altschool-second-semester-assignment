@@ -12,8 +12,9 @@ function App() {
       <ErrorBoundary>
         <Routes>
           <Route path="*" element={<PageNotFound />} />
-          <Route path="/" element={<Home />} />
+          <Route index element={<Home />} />
           <Route path="/Home" element={<Home />} />
+          <Route path="/Users/:id" element={<Users />} />
           <Route path="/Users" element={<Users />} />
         </Routes>
       </ErrorBoundary>

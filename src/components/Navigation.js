@@ -10,7 +10,7 @@ export default function Navigation() {
           isActive ? { color: "red" } : { color: "blue" }
         }
         className="bar"
-        to="/"
+        to="/Home"
       >
         Home
       </NavLink>

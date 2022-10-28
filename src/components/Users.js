@@ -26,8 +26,10 @@ function Users() {
 
   return (
     <section className="users-container">
-      <h1>Users</h1>
       <Navigation />
+      <h2>You are inside the Users Component</h2>
+      <h4>URL: localhost:3000/Users/</h4>
+      <br />
       <div className="Users">
         <h2>List of Users</h2>
         {data?.results.map((each, index) => {
@@ -38,15 +40,14 @@ function Users() {
             }.${name}`}</li>
           );
         })}
-        {
-        }
-          <button
-            className="nav"
-            disabled={page <= 1}
-            onClick={() => setPage((prev) => prev - 1)}
-          >
-            Prev
-          </button>
+        {}
+        <button
+          className="nav"
+          disabled={page <= 1}
+          onClick={() => setPage((prev) => prev - 1)}
+        >
+          Prev
+        </button>
         <p>
           Pages: {page} of {pages}
         </p>

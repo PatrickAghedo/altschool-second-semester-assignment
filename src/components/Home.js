@@ -5,9 +5,11 @@ import Navigation from "./Navigation";
 export default function Home() {
   return (
     <section className="home-container">
-      <h1>Home</h1>
       <Navigation />
-      <p>This is the Home Page</p>
+      <div className="Search">
+        <h2>You are inside the Home Component</h2>
+        <h4>URL: localhost:3000/</h4>
+      </div>
     </section>
   );
 }
