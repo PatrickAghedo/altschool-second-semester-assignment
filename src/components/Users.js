@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Navigation from "../Navigation";
+import Navigation from "./Navigation";
 import "../style.css";
+import FetchAPI from "./FetchAPI";
 
 export default function Users() {
   const [currentItem, setCurrentItem] = useState(0);
@@ -632,8 +633,11 @@ export default function Users() {
   const handlePrevious = (event) => {
     event.preventDefault();
 
-    if (currentItem > 0) { setCurrentItem((prev) => prev - 1); } else { setCurrentItem(0); }
-    
+    if (currentItem > 0) {
+      setCurrentItem((prev) => prev - 1);
+    } else {
+      setCurrentItem(0);
+    }
   };
 
   return (
@@ -641,6 +645,7 @@ export default function Users() {
       <h1>Users</h1>
       <p>This is the Users Page</p>
       <Navigation />
+      <button onClick={<FetchAPI />}>Users</button>
       <section className="news">
         {loading ? (
           <div>loading</div>
@@ -653,8 +658,6 @@ export default function Users() {
             <p>Last_Name: {news.last}</p>
             <p>Email_Address: {news.email}</p>
             <p>Address: {news.address}</p>
-            <p>Created: {news.created}</p>
-            <p>Balance: {news.balance}</p>
           </div>
         )}
       </section>

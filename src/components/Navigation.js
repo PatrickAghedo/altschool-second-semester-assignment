@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./style.css";
+import "../style.css";
 
 export default function Navigation() {
   return (
@@ -19,9 +19,9 @@ export default function Navigation() {
           isActive ? { color: "white" } : { color: "black" }
         }
         className="nav"
-        to="/userz"
+        to="/users"
       >
-        userz
+        users
       </NavLink>
     </section>
   );
